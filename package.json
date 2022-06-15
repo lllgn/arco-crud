@@ -1,0 +1,56 @@
+{
+  "name": "@lllgn/arco-crud",
+  "private": false,
+  "version": "0.0.53",
+  "description": "arco-crud 是基于现有的arco-design库进行的二次封装,数据驱动视图组件",
+  "keywords": [
+    "vue",
+    "vue3",
+    "arco-design",
+    "arco",
+    "arco-crud",
+    "crud",
+    "arco-form"
+  ],
+  "author": "lllgn",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/arco-crud.umd.js",
+  "module": "./dist/arco-crud.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/arco-crud.es.js",
+      "require": "./dist/arco-crud.umd.js"
+    },
+    "./dist/style.css": {
+      "import": "./dist/style.css",
+      "require": "./dist/style.css"
+    }
+  },
+  "dependencies": {
+    "file-saver": "^2.0.5",
+    "qs": "^6.10.3",
+    "vue": "^3.2.25",
+    "vue-json-viewer": "^3.0.4",
+    "vue-router": "^4.0.16"
+  },
+  "devDependencies": {
+    "@arco-design/web-vue": "^2.25.0",
+    "@vitejs/plugin-vue": "^2.3.1",
+    "less": "^4.1.2",
+    "typescript": "^4.5.4",
+    "vite": "^2.9.6",
+    "vue-tsc": "^0.34.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.code.tencent.com:arco/crud.git"
+  }
+}

@@ -1,0 +1,166 @@
+// 头部高度
+@headerHeight: 65px;
+// 边颜色
+@borderColor: rgb(229, 230, 235);
+
+// 编辑器
+.editor_container {
+  width: 100vw;
+  height: 100%;
+  background: #f8f8f8;
+  .editor_header {
+    background: #ffffff;
+  }
+
+  .editor_panel {
+    width: 100%;
+    height: calc(100vh - @headerHeight);
+    background: #f8f8f8;
+    display: flex;
+    flex-flow: row;
+
+    // 工具栏
+    .crud_editor_toolbar {
+      width: 290px;
+      height: 100%;
+      border-top: 1px solid @borderColor;
+      border-right: 1px solid @borderColor;
+      background: #ffffff;
+      .grid {
+        width: 290px;
+        margin-top: 20px;
+        .item {
+          display: flex;
+          flex-flow: column;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+
+    // 内容面板
+    .crud_editor_content_panel {
+      border-top: 1px solid @borderColor;
+      height: 100%;
+      flex: 1;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      background: #f8f8f8;
+      .tabs {
+        width: 100%;
+        padding: 10px 0;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+      }
+      .content_panel_container {
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 50px;
+        height: 100%;
+        .form {
+          width: 700px;
+          padding: 10px 20px;
+          border-radius: 12px;
+          background: #ffffff;
+        }
+        .crud {
+          width: 700px;
+          padding: 10px 20px;
+          border-radius: 12px;
+          background: #ffffff;
+        }
+        .json_viewer {
+          min-width: 800px;
+          max-height: 700px;
+          overflow-y: scroll;
+          .viewer {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    // 列表项面板
+    .crud_editor_columns_panel {
+      height: 100%;
+      background: #ffffff;
+      border-top: 1px solid @borderColor;
+      .resize {
+        padding-left: 0px !important;
+      }
+      .menu {
+        width: 100%;
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid @borderColor;
+        .title {
+          padding: 10px 20px;
+          font-size: medium;
+          font-weight: bold;
+        }
+      }
+      .menu_left {
+        margin-top: 10px;
+        width: 100%;
+        border-bottom-left-radius: 4px;
+        border-top-left-radius: 4px;
+        background: #1d2129;
+        padding: 10px;
+      }
+      .tree {
+        width: calc(100% - 20px);
+        padding: 6px;
+      }
+    }
+    .columns_panel_hide {
+      height: 100%;
+      border-left: none;
+      background: none;
+    }
+
+    // 属性面板
+    .crud_editor_props_panel {
+      width: 300px;
+      border-top: 1px solid @borderColor;
+      height: 100%;
+      border-left: 1px solid @borderColor;
+      background: #ffffff;
+
+      .menu {
+        width: 300px;
+        height: 60px;
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 1px solid @borderColor;
+        .title {
+          font-size: medium;
+          font-weight: bold;
+        }
+      }
+      .editor_form {
+        height: calc(100% - 90px);
+        padding: 10px 20px;
+        overflow-y: scroll;
+      }
+      ::-webkit-scrollbar {
+        height: 0;
+        width: 0;
+        color: transparent;
+      }
+    }
+  }
+}
+
+.empty {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
