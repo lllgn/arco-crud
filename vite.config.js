@@ -43,7 +43,7 @@ const project = (url) => {
     // 打包配置
     build: {
       sourcemap: true,
-      outDir: "doc", //指定输出路径
+      outDir: "docs", //指定输出路径
       assetsDir: "static/img/", // 指定生成静态资源的存放路径
       rollupOptions: {
         output: {
