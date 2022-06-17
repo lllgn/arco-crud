@@ -24,7 +24,7 @@
         <a-link href="https://github.com/lllgn/arco-crud" :hoverable="false">
           <svg-icon name="github" class="icon"></svg-icon
         ></a-link>
-        <a-link href="link" :hoverable="false">
+        <a-link href="https://gitee.com/lllgn/arco-crud" :hoverable="false">
           <svg-icon name="gitee" class="icon"></svg-icon>
         </a-link>
         <a-link
@@ -37,8 +37,8 @@
     </template>
     <template #extra>
       <a-space>
-        <a-button type="text">表格示例</a-button>
-        <a-button type="text">表单示例</a-button>
+        <a-button type="text" @click="toDemo('crud_demo')">表格示例</a-button>
+        <a-button type="text" @click="toDemo('form_demo')">表单示例</a-button>
       </a-space>
       <a-space class="icon-row">
         <a-button @click="handelFiles('form')">导出表单数据</a-button>
@@ -50,6 +50,9 @@
 
 <script lang="ts" setup name="toolbar">
 import { defineEmits } from "vue";
+import { useRouter } from "vue-router";
+// 路由
+const router = useRouter();
 
 // 声明事件
 const emit = defineEmits(["click"]);
@@ -57,6 +60,12 @@ const emit = defineEmits(["click"]);
 // 生成json文件
 const handelFiles = (type: string) => {
   emit("click", type);
+};
+// 跳转至demo
+const toDemo = (type: string) => {
+  router.push({
+    name: type,
+  });
 };
 </script>
 
@@ -68,6 +77,7 @@ const handelFiles = (type: string) => {
     width: 22px;
     height: 22px;
     margin-left: 20px;
+
   }
 }
 </style>

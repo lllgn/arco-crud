@@ -5,16 +5,18 @@
   - Email:lllgn@qq.com
   -->
 <template>
-  <div>
-    <arco-form
-      ref="formRef"
-      v-model:form="form"
-      model="normal"
-      :columns="columns"
-      :option="option"
-      @formColumnInput="onEvent"
-    ></arco-form>
-    <a-button type="primary" @click="onNext">下一步</a-button>
+  <div style="padding: 20px">
+    <a-card :style="{ width: '800px' }" title="表单DEMO">
+      <arco-form
+        ref="formRef"
+        v-model:form="form"
+        model="normal"
+        :columns="columns"
+        :option="option"
+        @formColumnInput="onEvent"
+      ></arco-form>
+      <a-button type="primary" @click="onNext">下一步</a-button>
+    </a-card>
   </div>
 </template>
 

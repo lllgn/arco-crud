@@ -5,39 +5,39 @@
   - Email:lllgn@qq.com
   -->
 <template>
-  <div>
-    <arco-crud
-      :loading="loading"
-      :option="option"
-      :columns="columns"
-      :table-data="tableData"
-      :beforeAddModalOpen="onUpdate"
-      @refresh="onRefresh"
-      @row-update="onUpdate"
-      @row-save="onSave"
-      @row-del="onDel"
-      @search-change="onSearchChange"
-    >
-      <template #roadSearch>
-        <a-button type="primary">街道插槽</a-button>
-      </template>
-      <template #roadForm="{ scope }">
-        {{ scope }}
-        <a-button type="primary">街道插槽</a-button>
-      </template>
-      <template #status>
-        <a-button type="primary">街道插槽</a-button>
-      </template>
-      <template #menuLeftStart>
-        <a-button type="primary">街道插槽</a-button>
-      </template>
-      <template #handleMenuBefore>
-        <a-button type="text">查看 </a-button>
-        <a-button type="text">编辑 </a-button>
-        <a-button type="text">设置门店类型 </a-button>
-        <a-button type="text">删除 </a-button>
-      </template>
-    </arco-crud>
+  <div class="padding: 20px;">
+    <a-card :style="{ width: '900px' }" title="表格DEMO">
+      <arco-crud
+        :loading="loading"
+        :option="option"
+        :columns="columns"
+        :table-data="tableData"
+        :beforeAddModalOpen="onUpdate"
+        @refresh="onRefresh"
+        @row-update="onUpdate"
+        @row-save="onSave"
+        @row-del="onDel"
+        @search-change="onSearchChange"
+      >
+        <template #roadSearch>
+          <a-button type="primary">街道插槽</a-button>
+        </template>
+        <template #roadForm>
+          <a-button type="primary">街道插槽</a-button>
+        </template>
+        <template #status>
+          <a-button type="primary">街道插槽</a-button>
+        </template>
+        <template #menuLeftStart>
+          <a-button type="primary">街道插槽</a-button>
+        </template>
+        <template #handleMenuBefore>
+          <a-button type="text">查看 </a-button>
+          <a-button type="text">编辑 </a-button>
+          <a-button type="text">删除 </a-button>
+        </template>
+      </arco-crud>
+    </a-card>
   </div>
 </template>
 
@@ -60,14 +60,6 @@ const datas = reactive<{
   loading: false,
   option: {},
   columns: [
-    {
-      label: "扣税的房价肯定是付款计划",
-      prop: "name",
-      type: "title",
-      searchSort: 0,
-      desc: "扣税的房价肯定是付款计划",
-      hide: true,
-    },
     {
       label: "姓名",
       prop: "name",
@@ -260,151 +252,6 @@ const datas = reactive<{
       no: "67",
       phone: "12345678",
       email: "kevin.sandra@example.com",
-    },
-    {
-      key: "4",
-      name: "Ed Hellen",
-      salary: 1700,
-      birthday: "1991-06-21",
-      city: "London",
-      road: "Park",
-      no: "317",
-      sex: "1",
-      hobby: "1",
-      phone: "12345678",
-      email: "ed.hellen@example.com",
-    },
-    {
-      key: "5",
-      name: "William Smith",
-      salary: 2700,
-      birthday: "1996-08-21",
-      city: "Paris",
-      road: "Park",
-      sex: "1",
-      no: "114",
-      phone: "12345678",
-      email: "william.smith@example.com",
-    },
-    {
-      key: "5",
-      name: "William Smith",
-      salary: 2700,
-      birthday: "1996-08-21",
-      city: "Paris",
-      road: "Park",
-      sex: "1",
-      no: "114",
-      phone: "12345678",
-      email: "william.smith@example.com",
-    },
-    {
-      key: "5",
-      name: "William Smith",
-      salary: 2700,
-      birthday: "1996-08-21",
-      city: "Paris",
-      road: "Park",
-      sex: "1",
-      no: "114",
-      phone: "12345678",
-      email: "william.smith@example.com",
-    },
-    {
-      key: "5",
-      name: "William Smith",
-      salary: 2700,
-      birthday: "1996-08-21",
-      city: "Paris",
-      road: "Park",
-      sex: "1",
-      no: "114",
-      phone: "12345678",
-      email: "william.smith@example.com",
-    },
-    {
-      key: "5",
-      name: "William Smith",
-      salary: 2700,
-      birthday: "1996-08-21",
-      city: "Paris",
-      road: "Park",
-      sex: "1",
-      no: "114",
-      phone: "12345678",
-      email: "william.smith@example.com",
-    },
-    {
-      key: "5",
-      name: "William Smith",
-      salary: 2700,
-      birthday: "1996-08-21",
-      city: "Paris",
-      road: "Park",
-      sex: "1",
-      no: "114",
-      phone: "12345678",
-      email: "william.smith@example.com",
-    },
-    {
-      key: "5",
-      name: "William Smith",
-      salary: 2700,
-      birthday: "1996-08-21",
-      city: "Paris",
-      road: "Park",
-      sex: "1",
-      no: "114",
-      phone: "12345678",
-      email: "william.smith@example.com",
-    },
-    {
-      key: "5",
-      name: "William Smith",
-      salary: 2700,
-      birthday: "1996-08-21",
-      city: "Paris",
-      road: "Park",
-      sex: "1",
-      no: "114",
-      phone: "12345678",
-      email: "william.smith@example.com",
-    },
-    {
-      key: "5",
-      name: "William Smith",
-      salary: 2700,
-      birthday: "1996-08-21",
-      city: "Paris",
-      road: "Park",
-      sex: "1",
-      no: "114",
-      phone: "12345678",
-      email: "william.smith@example.com",
-    },
-    {
-      key: "5",
-      name: "William Smith",
-      salary: 2700,
-      birthday: "1996-08-21",
-      city: "Paris",
-      road: "Park",
-      sex: "1",
-      no: "114",
-      phone: "12345678",
-      email: "william.smith@example.com",
-    },
-    {
-      key: "5",
-      name: "William Smith",
-      salary: 2700,
-      birthday: "1996-08-21",
-      city: "Paris",
-      road: "Park",
-      sex: "1",
-      no: "114",
-      phone: "12345678",
-      email: "william.smith@example.com",
     },
   ],
 });
