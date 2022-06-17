@@ -4,7 +4,7 @@ const router = createRouter({
   history: createWebHistory(),
   routes: [
     {
-      path: "/",
+      path: "/arco-crud",
       redirect: "crud_editor",
     },
     {

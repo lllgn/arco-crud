@@ -39,7 +39,7 @@ const project = (url) => {
         "/@": resolve(__dirname, ".", "src")
       },
     },
-    // base: url,
+    base: url,
     // 打包配置
     build: {
       sourcemap: true,
